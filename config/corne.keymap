@@ -9,6 +9,55 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        vpn_toggle {
+            bindings = <&kp LG(P)>;
+            key-positions = <10 1>;
+        };
+
+        close {
+            bindings = <&kp LG(Q)>;
+            key-positions = <29 30>;
+        };
+
+        Lang_switch {
+            bindings = <&kp RG(SPACE)>;
+            key-positions = <16 19>;
+        };
+
+        Web {
+            bindings = <&kp RG(S)>;
+            key-positions = <17 18>;
+        };
+
+        Editor {
+            bindings = <&kp RG(Z)>;
+            key-positions = <28 31>;
+        };
+
+        Save {
+            bindings = <&kp LC(S)>;
+            key-positions = <16 22>;
+        };
+
+        Messenger {
+            bindings = <&kp RG(A)>;
+            key-positions = <4 7>;
+        };
+
+        Cmd {
+            bindings = <&kp RG(X)>;
+            key-positions = <27 32>;
+        };
+
+        Ctrl_p {
+            bindings = <&kp RC(P)>;
+            key-positions = <13 22>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
