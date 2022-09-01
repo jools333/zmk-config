@@ -118,7 +118,7 @@
 
         CALC_LAYER {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans  &trans  &trans  &trans  &kp K_NEXT  &kp K_MUTE  &trans  &kp LS(LG(Q))  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp BACKSPACE  &kp MINUS  &kp PLUS  &kp STAR  &kp SLASH  &kp K_PLAY_PAUSE  &kp K_STOP  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp K_CALC  &trans  &kp DOT  &trans  &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LGUI   &to 0  &kp SPACE  &kp ENTER   &to 0   &to 1
             >;
         };
 
