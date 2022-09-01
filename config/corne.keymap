@@ -106,13 +106,13 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &kp RS(INSERT)  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC  &kp LCTRL  &tog 4   &none   &none  &kp BACKSPACE  &tog 3  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &kp LALT  &tog 5  &kp LC(X)   &none  &kp LC(LA(P))   &none  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &kp LGUI  &trans  &kp SPACE  &mt LSHFT ENTER  &trans  &kp RALT
+ &kp RS(INSERT)  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp BSPC  &kp LCTRL  &tog 4   &none   &none  &kp BACKSPACE  &tog 3  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &kp LALT  &tog 5  &kp LC(X)   &none  &kp LC(LA(P))   &none  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &kp LGUI  &trans  &kp SPACE  &mt LSHFT ENTER  &trans  &kp RALT
             >;
         };
 
         MOUSE_LAYER {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &kp TAB  &kp ENTER  &trans  &trans  &trans  &kp HOME  &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP  &trans  &trans  &trans  &trans  &kp LCTRL  &kp LSHFT  &kp LALT  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans   &to 0  &trans
             >;
         };
 
