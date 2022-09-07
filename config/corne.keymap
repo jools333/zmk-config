@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/mouse.h>
 
 &mmv {
     time-to-max-speed-ms = <1500>;
@@ -24,12 +23,12 @@
         compatible = "zmk,combos";
 
         vpn_toggle {
-            bindings = <&kp LG(P)>;
+            bindings = <&kp LS(LG(P))>;
             key-positions = <10 1>;
         };
 
         close {
-            bindings = <&kp LG(Q)>;
+            bindings = <&kp LS(LG(Q))>;
             key-positions = <29 30>;
         };
 
@@ -60,7 +59,7 @@
 
         Cmd {
             bindings = <&kp RG(X)>;
-            key-positions = <27 32>;
+            key-positions = <3 8>;
         };
 
         Ctrl_p {
@@ -124,7 +123,7 @@
 
         MOUSE_LAYER {
             bindings = <
- &kp TAB  &kp ENTER  &trans  &bl BL_SET 30  &trans  &kp HOME  &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans  &trans  &trans  &mwh SCROLL_HOR(-50)  &mwh SCROLL_HOR(50)  &mwh SCROLL_VERT(50)  &kp PAGE_UP  &mmv MOVE_HOR(-1500)  &mmv MOVE_VERT(1500)  &mmv MOVE_VERT(-1500)  &mmv MOVE_HOR(1500)  &kp LCTRL  &kp LSHFT  &kp LALT  &trans  &trans  &trans  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK  &mkp RCLK  &to 0  &mkp MCLK
+ &kp TAB  &kp ENTER  &trans  &bl BL_SET 30  &trans  &kp HOME  &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans  &trans  &trans  &mwh SCROLL_HOR(-50)  &mwh SCROLL_HOR(50)  &mwh SCROLL_VERT(50)  &kp PAGE_UP  &mmv MOVE_HOR(-1500)  &mmv MOVE_VERT(1500)  &mmv MOVE_VERT(-1500)  &mmv MOVE_HOR(1500)  &kp LCTRL  &kp LSHFT  &kp LALT  &trans  &trans  &trans  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK  &mkp RCLK   &to 0  &mkp MCLK
             >;
         };
 
