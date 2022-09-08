@@ -124,7 +124,7 @@
 
         MOUSE_LAYER {
             bindings = <
- &kp TAB  &kp ENTER  &trans   &mo 6  &trans  &kp HOME  &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans  &trans  &trans  &mwh SCROLL_HOR(-50)  &mwh SCROLL_HOR(50)  &mwh SCROLL_VERT(50)  &kp PAGE_UP  &mmv MOVE_HOR(-500)  &mmv MOVE_VERT(500)  &mmv MOVE_VERT(-500)  &mmv MOVE_HOR(500)  &kp LCTRL  &kp LSHFT  &kp LALT  &trans  &trans  &trans  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK  &mkp RCLK   &to 0  &mkp MCLK
+ &kp TAB  &kp ENTER  &trans   &mo 6  &trans  &kp HOME  &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans  &trans  &trans  &mwh SCROLL_HOR(-50)  &mwh SCROLL_HOR(50)  &mwh SCROLL_VERT(50)  &kp PAGE_UP  &mmv MOVE_HOR(-100)  &mmv MOVE_VERT(100)  &mmv MOVE_VERT(-100)  &mmv MOVE_HOR(100)  &kp LCTRL  &kp LSHFT  &kp LALT  &trans  &trans  &trans  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK  &mkp RCLK   &to 0  &mkp MCLK
             >;
         };
 
