@@ -74,7 +74,7 @@
         };
 
         Change_win {
-            bindings = <&kp LC(TAB)>;
+            bindings = <&kp LA(TAB)>;
             key-positions = <27 32>;
         };
 
