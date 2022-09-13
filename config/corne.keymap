@@ -89,14 +89,14 @@
             compatible = "zmk,behavior-macro";
             label = "arrow";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GREATER_THAN>;
+            bindings =  <&macro_tap &kp MINUS &kp GREATER_THAN>;
         };
 
-        fat_arrow: arrow {
+        fat_arrow: fat_arrow {
             compatible = "zmk,behavior-macro";
             label = "fat_arrow";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GREATER_THAN>;
+            bindings =  <&macro_tap &kp EQUAL &kp GREATER_THAN>;
         };
     };
 
