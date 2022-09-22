@@ -84,7 +84,7 @@
         };
 
         vpn2_toggle {
-            bindings = <&kp LS(LG(Q))>;
+            bindings = <&kp LS(LG(Y))>;
             key-positions = <25 34>;
         };
     };
