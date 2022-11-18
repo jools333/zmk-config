@@ -31,8 +31,8 @@
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_CLOSE";
-            #binding-cells = <0>;
+            label = "TAP_DANCE_WEB";
+            #binding-cells = <1>;
             tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&kp RG(S)>, <&kp LS(LG(X))>;
         };
