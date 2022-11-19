@@ -46,8 +46,8 @@
             key-positions = <10 1>;
         };
 
-        close {
-            bindings = <&kp LS(LG(Q))>;
+        web {
+            bindings = <&kp RG(S)>;
             key-positions = <12 23>;
         };
 
@@ -56,8 +56,8 @@
             key-positions = <16 19>;
         };
 
-        Web {
-            bindings = <&kp RG(S)>;
+        close {
+            bindings = <&kp LS(LG(Q))>;
             key-positions = <25 34>;
         };
 
