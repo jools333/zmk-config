@@ -149,7 +149,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &kp RC(C)  &kp NUMBER_1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp SEMICOLON  &kp RC(V)  &kp RC(LS(I))  &kp HOME  &kp END  &kp BACKSPACE  &kp LS(GRAVE)  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS  &mt LEFT_CONTROL F12  &kp RC(X)  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &tog 1  &kp LALT  &mt LEFT_CONTROL TAB  &mt LSHFT ENTER  &trans  &kp SPACE
+ &kp RC(C)  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp SEMICOLON  &kp RC(V)  &kp RC(LS(I))  &kp HOME  &kp END  &kp BACKSPACE  &kp LS(GRAVE)  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS  &mt LEFT_CONTROL F12  &kp RC(X)  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &tog 1  &kp LALT  &mt LEFT_CONTROL TAB  &mt LSHFT ENTER  &trans  &kp SPACE
             >;
         };
 
@@ -173,7 +173,7 @@
 
         CALC_LAYER {
             bindings = <
- &out OUT_USB  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans  &trans  &trans  &trans  &kp K_NEXT  &kp K_MUTE  &out OUT_BLE  &kp LS(LG(Q))  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp BACKSPACE  &kp MINUS  &kp PLUS  &kp STAR  &kp SLASH  &kp K_PLAY_PAUSE  &kp K_STOP  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp K_CALC  &trans  &kp DOT  &trans  &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LGUI   &to 0  &kp SPACE  &kp ENTER   &to 0   &to 1
+ &out OUT_USB  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans  &trans  &trans  &trans  &kp K_NEXT  &kp K_MUTE  &out OUT_BLE  &kp LS(LG(Q))  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp BACKSPACE  &kp MINUS  &kp PLUS  &kp STAR  &kp SLASH  &kp K_PLAY_PAUSE  &kp K_STOP  &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp K_CALC  &trans  &kp DOT  &trans  &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LGUI   &to 0  &kp SPACE  &kp ENTER   &to 0   &to 1
             >;
         };
 
