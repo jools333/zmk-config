@@ -21,7 +21,8 @@
 };
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
 };
 
 / {
