@@ -20,6 +20,10 @@
     acceleration-exponent = <0>;
 };
 
+&mt {
+    tapping-term-ms = <300>;
+};
+
 / {
     behaviors {
         td0: tap_dance_0 {
