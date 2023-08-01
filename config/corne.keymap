@@ -165,7 +165,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp RC(C)  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp SEMICOLON  &kp RC(V)  &kp RC(LS(I))  &kp HOME  &kp END  &kp BACKSPACE  &kp LS(GRAVE)  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS  &mt LEFT_CONTROL F12  &kp RC(X)  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &tog 1  &kp LALT  &mt LEFT_CONTROL TAB  &mt LSHFT ENTER  &trans  &kp SPACE
+&kp RC(C)  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp SEMICOLON  &kp RC(V)  &kp RC(LS(I))  &kp HOME  &kp END  &kp BACKSPACE  &kp LS(GRAVE)  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS  &mt LEFT_CONTROL F12  &kp RC(X)  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp LC(F11)  &kp LALT  &mt LEFT_CONTROL TAB  &mt LSHFT ENTER  &trans  &kp SPACE
             >;
         };
 
