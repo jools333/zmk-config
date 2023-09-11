@@ -195,7 +195,7 @@
 
         GAME_LAYER {
             bindings = <
-&bt BT_CLR  &kp ENTER  &trans  &kp W  &mo 7  &kp HOME  &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans  &trans  &trans  &kp A  &kp S  &kp D  &kp PAGE_UP  &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &kp LCTRL  &kp LSHFT  &kp LALT  &trans  &trans  &trans  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK  &mkp RCLK  &to 0  &mkp MCLK
+&bt BT_CLR  &kp ENTER  &trans  &kp W  &mo 7  &kp HOME  &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans  &bt BT_SEL_0 &bt BT_SEL_1  &kp A  &kp S  &kp D  &kp PAGE_UP  &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &kp LCTRL  &kp LSHFT  &kp LALT  &trans  &trans  &trans  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK  &mkp RCLK  &to 0  &mkp MCLK
             >;
         };
 
