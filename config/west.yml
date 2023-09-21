@@ -4,10 +4,14 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ftc
       url-base: https://github.com/ftc
+    - name: ufan
+      url-base: https://github.com/ufan
+    - name:  victorlucachi
+      url-base: https://github.com/victorlucachi
   projects:
     - name: zmk
-      remote: ftc
-      revision: mouse-ftc
+      remote: victorlucachi
+      revision: pmw3610-aml
       import: app/west.yml
   self:
     path: config
