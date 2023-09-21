@@ -14,8 +14,6 @@
 ---
 include:
   - board: nrfmicro_13
-    shield: corne_left
+    shield: charybdis_left
   - board: nrfmicro_13
-    shield: corne_right
-  - board: nrfmicro_13
-    shield: settings_reset
+    shield: charybdis_right
