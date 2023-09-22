@@ -28,7 +28,7 @@
         };
 
         mclk: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "TAP_DANCE_CLOSE";
             flavor = "tap-preferred";
             #binding-cells = <0>;
@@ -39,7 +39,7 @@
                 <&mkp LCLK>;
         };
         mclk2: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "TAP_DANCE_WEB";
             flavor = "tap-preferred";
             #binding-cells = <0>;
