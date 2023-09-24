@@ -1,224 +1,134 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/bt.h>
 
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <0>;
-};
+#define QWERTY 0
+#define NUMB 1
+#define NAVI 2
+#define ADJUST 3
 
-&mwh {
-    time-to-max-speed-ms = <3000>;
-    acceleration-exponent = <0>;
+&lt {
+  tapping-term-ms = <300>;
+  quick_tap_ms = <200>;
+  flavor = "hold-preferred";
 };
 
 / {
-    behaviors {
-        gqt: global-quick-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
+  chosen {
+    zmk,matrix_transform = &default_transform;
+  };
 
-        mclk: tap_dance_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_DANCE_CLOSE";
-            flavor = "tap-preferred";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            bindings = <&mo>, <&mkp>;
-        };
-        mclk2: tap_dance_1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_DANCE_WEB";
-            flavor = "tap-preferred";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            bindings = <&kp>, <&mkp>;
-        };
+  behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick_tap_ms = <150>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
     };
-
-    combos {
-        compatible = "zmk,combos";
-
-        vpn_toggle {
-            bindings = <&kp LS(LG(P))>;
-            key-positions = <10 1>;
-        };
-
-        web {
-            bindings = <&kp RG(S)>;
-            key-positions = <12 23>;
-        };
-
-        Lang_switch {
-            bindings = <&kp RG(SPACE)>;
-            key-positions = <16 19>;
-        };
-
-        close {
-            bindings = <&kp LS(LG(Q))>;
-            key-positions = <25 34>;
-        };
-
-        Editor {
-            bindings = <&kp RG(Z)>;
-            key-positions = <28 31>;
-        };
-
-        Save {
-            bindings = <&kp LC(S)>;
-            key-positions = <16 22>;
-        };
-
-        Messenger {
-            bindings = <&kp RG(A)>;
-            key-positions = <4 7>;
-        };
-
-        Cmd {
-            bindings = <&kp RG(X)>;
-            key-positions = <3 8>;
-        };
-
-        Ctrl_p {
-            bindings = <&kp RC(P)>;
-            key-positions = <13 22>;
-        };
-
-        arrow {
-            bindings = <&arrow>;
-            key-positions = <9 2>;
-        };
-
-        Change_win {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <27 32>;
-        };
-
-        fat_arrow {
-            bindings = <&fat_arrow>;
-            key-positions = <26 33>;
-        };
-
-        vpn2_toggle {
-            bindings = <&kp LS(LG(Y))>;
-            key-positions = <25 34>;
-        };
+    lm: left_hand_positional_hold_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "LEFT_HOMEROW_MODS";
+      #binding-cells = <2>;
+      flavor = "tap-unless-interrupted";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <200>;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
     };
-
-    macros {
-        arrow: arrow {
-            compatible = "zmk,behavior-macro";
-            label = "arrow";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp MINUS &kp GREATER_THAN>;
-        };
-        fat_arrow: fat_arrow {
-            compatible = "zmk,behavior-macro";
-            label = "fat_arrow";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp EQUAL &kp GREATER_THAN>;
-        };
+    rm: right_hand_positional_hold_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "RIGHT_HOMEROW_MODS";
+      #binding-cells = <2>;
+      flavor = "tap-unless-interrupted";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <200>;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
     };
-    keymap {
+  };
+
+
+
+  keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
-            &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T                                                &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT
-            &mt LEFT_CONTROL LC(F12)  &kp A  &kp S  &kp D  &gqt LEFT_CONTROL F  &gqt LEFT_ALT G       &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &mt LEFT_CONTROL SINGLE_QUOTE
-            &mclk2 LALT RCLK  &kp Z  &kp X  &kp C  &kp V  &kp B                                       &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &mt LEFT_ALT ESC
-                                &mt LEFT_GUI DELETE  &mclk 2 LCLK  &mt LEFT_SHIFT SPACE                      &mt LEFT_SHIFT ENTER  &mo 1 &mkp MCLK
-            >;
-        };
+                default_layer {
+// .--------------------------------------------------------------.       .-----------------------------------------------------------.
+// |   ESC        |    Q    |    W   |   E    |    R    |    T    |       |   Y   |    U    |    I    |    O    |     P    |    \     |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |   CTRL/Tab   |    A    |    S   |   D    |    F    |    G    |       |   H   |    J    |    K    |    L    |     ;    |     '    |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |   SHFT       |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |    ,    |    .    |     /    | ` | ALT  |
+// '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
+//                                   |  GUI   |   MO1   |   ENT   |       |  SPC  |   BKSP  |  CAPS   |
+//                                   '--------+---------+---------'       '-------+---------+---------'
+                        bindings = <
+   &trans &kp ESC        &kp Q       &kp W      &kp E     &kp R           &kp T   &kp Y  &kp U           &kp I        &kp O     &kp P      &kp LBKT   &trans
+   &mt LCTRL TAB  &kp A       &kp S      &kp D     &kp F           &kp G   &kp H  &kp J           &kp K        &kp L     &kp SEMI   &kp SQT
+   &kp LSHFT      &kp Z       &kp X      &kp C     &kp V           &kp B   &kp N  &kp M           &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
+                  &kp LGUI    &mo 1      &lt NAVI RET              &kp SPACE       &kp BSPC    &kp CAPSLOCK
+                        >;
+                };
+		
+lower_layer {
+// .--------------------------------------------------------------.       .-----------------------------------------------------------.
+// |   ESC        |    1    |    2   |   3    |    4    |    5    |       |   6   |    7    |    8    |    9    |     0    |    `     |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |              |    !    |    @   |   #    |    $    |    %    |       |   ^   |    &    |    *    |    (    |     )    |     :    |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |   SHFT       |         |    +   |   -    |    {    |    [    |       |   ]   |    }    |    =    |    _    |          |          |
+// '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
+//                                   |  GUI   |         |   MO3   |       |   ,   |    .    |   ?     |
+//                                   '--------+---------+---------'       '-------+---------+---------'
+                        bindings = <
+   &trans &kp ESC    &kp N1       &kp N2            &kp N3             &kp N4               &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0     &kp GRAVE &trans
+   &trans     &kp EXCL     &kp AT            &kp HASH           &kp DLLR             &kp PRCNT         &kp CARET                &kp AMPS                   &kp KP_MULTIPLY        &kp LPAR                 &kp RPAR   &kp COLON
+   &kp LSHFT  &trans       &kp KP_PLUS       &kp KP_MINUS       &kp LEFT_BRACE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET        &kp RIGHT_BRACE            &kp KP_EQUAL           &kp UNDERSCORE           &trans     &trans
+                                             &kp LGUI           &trans               &mo ADJUST        &kp KP_N1                &kp KP_N2                  &kp KP_N3
+                        >;
+                };
+                
+                raise_layer {
+// .----------------------------------------------------------------.       .-----------------------------------------------------------------.
+// |   CMD+SHIFT+4  |       |   PU   |   UP   |    PD    |   HOME   |       |  HOME   |    PU    |    UP   |   PD    |          | CMD+SHIFT+4 |
+// |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
+// |                |       |  LEFT  |  DOWN  |   RIGHT  |   END    |       |  END    |   LEFT   |   DOWN  |  RIGHT  |          |             |
+// |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
+// |     OUT_TOG    |       |        |        |CTRL+LEFT |CTRL+RIGHT|       |CTRL+LEFT|CTRL+RIGHT|         |         |          |   OUT_TOG   |
+// '---------------------------------+--------+----------+----------+       |---------+----------+---------+----------------------------------'
+//                                   |  GUI   |   MO3    |          |       |         |          |         |
+//                                   '--------+----------+----------'       '---------+----------+---------'
 
-        lower_layer {
-            bindings = <
-            &kp RC(C)  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                             &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp SEMICOLON
-            &kp RC(V)  &kp RC(LS(I))  &kp HOME  &kp END  &kp BACKSPACE  &kp LC(F12)       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS  &mt LEFT_CONTROL F12
-            &kp RC(X)  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                             &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-                                     &kp LC(F3)  &kp LALT  &mt LEFT_CONTROL TAB           &mt LSHFT ENTER  &trans &trans
-            >;
-        };
+                        bindings = <
+   &trans &kp LG(LS(N4))  &trans     &kp PAGE_UP        &kp UP_ARROW      &kp PAGE_DOWN       &kp HOME                &kp CARET            &kp PAGE_UP             &kp UP_ARROW       &kp PAGE_DOWN      &kp HOME     &kp LG(LS(N4)) &trans
+   &trans                 &trans     &kp LEFT_ARROW     &kp DOWN_ARROW    &kp RIGHT_ARROW     &kp END                 &kp MINUS            &kp LEFT_ARROW          &kp DOWN_ARROW     &kp RIGHT_ARROW    &kp END      &trans
+   &out OUT_TOG           &trans     &trans             &trans            &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)     &kp LC(LEFT_ARROW)   &kp LC(RIGHT_ARROW)     &trans             &trans             &trans       &out OUT_TOG
+                                     &kp LGUI           &mo ADJUST        &trans              &trans   &trans   &trans
+                        >;
+                };
 
-        raise_layer {
-            bindings = <
-            &kp RS(INSERT)  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp BSPC
-            &kp LCTRL  &tog 3  &none  &none  &kp BACKSPACE  &tog 4                         &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-            &kp LALT  &tog 8  &kp LC(X)  &none  &kp LC(LA(P))  &none                       &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                                     &kp LGUI  &trans  &kp SPACE                           &mt LSHFT ENTER  &trans &trans
-            >;
+                adjust_layer {
+// .--------------------------------------------------------.       .--------------------------------------------------------------.
+// |         |        |        |        |         |         |       |  VOL+  |        |         |         |          |             |
+// |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
+// |  BTCLR  |  BT1   |  BT2   |  BT3   |  BT4    |  BT5    |       |  VOL-  |        |         |         |          |             |
+// |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
+// |         |        |        |        |         |         |       |        |        |         |         |          |             |
+// '---------------------------+--------+---------+---------+       |--------+--------+---------+----------------------------------'
+//                             |        |         |         |       |        |        |         |
+//                             '--------+---------+---------'       '--------+--------+---------'
 
-        };
+                        bindings = <
+   &trans &reset      &trans          &trans         &trans          &trans          &trans            &kp C_VOLUME_UP    &trans &trans &trans &trans &reset &trans
+   &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &kp C_VOLUME_DOWN  &trans &trans &trans &trans &trans
+   &trans      &trans          &trans         &trans          &trans          &trans            &trans             &trans &trans &trans &trans &trans
+                                   &trans &trans &trans   &trans &trans &trans
+                        >;
+                };
 
-        CALC_LAYER {
-            bindings = <
-            &out OUT_USB  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0              &trans  &trans  &trans  &trans  &kp K_NEXT  &kp K_MUTE
-            &out OUT_BLE  &kp LS(LG(Q))  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp BACKSPACE         &kp MINUS  &kp PLUS  &kp STAR  &kp SLASH  &kp K_PLAY_PAUSE  &kp K_STOP
-            &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp K_CALC                         &trans  &kp DOT  &trans  &trans  &kp K_VOL_DN  &kp K_VOL_UP
-                                       &kp LGUI  &to 0  &kp SPACE                                                 &kp ENTER  &to 0 &trans
-            >;
-        };
-
-        MOUSE_LAYER {
-            bindings = <
-            &kp TAB  &kp ENTER  &trans  &mo 5  &mo 6  &kp HOME                                                    &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans
-            &trans  &trans  &mwh SCROLL_HOR(-50)  &mwh SCROLL_HOR(50)  &mwh SCROLL_VERT(50)  &kp PAGE_UP          &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &kp LCTRL  &kp LSHFT
-            &kp LALT  &trans  &trans  &mo 7  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN                                 &trans  &trans  &trans  &trans  &trans  &kp ESC
-                                       &mkp MCLK  &kp LEFT_SHIFT  &mkp LCLK                                       &mkp RCLK  &to 0 &mkp MCLK
-            >;
-        };
-
-
-        MOUSE_LAYER2 {
-            bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                     &mmv MOVE_HOR(-1500)  &mmv MOVE_VERT(1500)  &mmv MOVE_VERT(-1500)  &mmv MOVE_HOR(1500)  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans  &trans  &trans                     &trans  &trans &trans
-            >;
-        };
-
-        MOUSE_LAYER3 {
-            bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                     &mmv MOVE_HOR(-100)  &mmv MOVE_VERT(100)  &mmv MOVE_VERT(-100)  &mmv MOVE_HOR(100)  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans  &trans  &trans                     &trans  &trans &trans
-            >;
-        };
-
-        MOUSE_LAYER_SCROLL {
-            bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans  &trans  &trans                     &trans  &trans &trans
-            >;
-        };
-
-        GAME_LAYER {
-            bindings = <
-            &bt BT_CLR  &kp ENTER  &trans  &kp W  &mo 7  &kp HOME                        &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &trans  &trans
-            &bt BT_SEL 0  &bt BT_SEL 1  &kp A  &kp S  &kp D  &kp PAGE_UP                 &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &kp LCTRL  &kp LSHFT
-            &kp LALT  &trans  &trans  &trans  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN       &trans  &trans  &trans  &trans  &trans  &kp ESC 
-                                      &mkp MCLK  &kp LEFT_SHIFT  &mkp LCLK               &mkp RCLK  &to 0 &kp RGUI
-
-            >;
-        };
     };
 };
