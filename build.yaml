@@ -1,2 +1,2 @@
 board: [ "nrfmicro_13" ]
-shield: [ "tbkmini_left", "tbkmini_right" ]
+shield: [ "tbkmini_left", "tbkmini_right", "settings_reset"]
