@@ -5,8 +5,8 @@ manifest:
     - name: ftc
       url-base: https://github.com/ftc
   projects:
-    - name: ftc
-      remote: zmkfirmware
+    - name: zmk
+      remote: ftc
       revision: mouse-ftc
       import: app/west.yml
   self:
