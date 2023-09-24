@@ -2,16 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: ftc
-      url-base: https://github.com/ftc
-    - name: ufan
-      url-base: https://github.com/ufan
-    - name:  victorlucachi
-      url-base: https://github.com/victorlucachi
   projects:
     - name: zmk
-      remote: victorlucachi
-      revision: pmw3610-aml
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
