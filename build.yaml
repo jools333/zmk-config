@@ -13,8 +13,10 @@
 #
 ---
 include:
+
   - board: nrfmicro_13
     shield: tbkmini_left
   - board: nrfmicro_13
     shield: tbkmini_right
-
+  - board: nrfmicro_13
+    shield: settings_reset
