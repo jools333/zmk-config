@@ -191,7 +191,7 @@
 
         GAME_LAYER {
             bindings = <
-            &bt BT_CLR  &kp ENTER  &none  &kp W  &mo MOUSE_LAYER  &kp HOME                              &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &none  none&
+            &bt BT_CLR  &kp ENTER  &none  &kp W  &mo MOUSE_LAYER  &kp HOME                              &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &none  &none
             &bt BT_SEL 0  &bt BT_SEL 1  &kp A  &kp S  &kp D  &kp PAGE_UP                                &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &kp LCTRL  &kp LSHFT
             &kp LALT  &none  &none  &none  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN                         &none  &none  &none  &none  &none  &kp ESC
                                                 &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK                    &mkp RCLK  &to DEFAULT  &mkp MCLK
