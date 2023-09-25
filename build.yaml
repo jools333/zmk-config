@@ -17,5 +17,5 @@ include:
     shield: charybdis_left
   - board: nrfmicro_13
     shield: charybdis_right
-  - board: nfrmicro_13
+  - board: nrfmicro_13
     shield: settings_reset
