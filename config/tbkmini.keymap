@@ -168,8 +168,10 @@
             &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T                                                          &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT
             &mt LEFT_CONTROL LC(F12)  &kp A  &kp S  &kp D  &gqt LEFT_CONTROL F  &gqt LEFT_ALT G                 &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &mt LEFT_CONTROL SINGLE_QUOTE
             &kp LALT  &kp Z  &kp X  &kp C  &kp V  &kp B                                                         &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &mt LEFT_ALT ESC
-                                                   &mt LEFT_GUI DELETE  &lt SYMBOLS DELETE  &mt LEFT_SHIFT SPACE       &mt LEFT_SHIFT ENTER  &lt DIGITS BACKSPACE  &kp RGUI
+                                            &mt LEFT_GUI DELETE  &lt SYMBOLS DELETE  &mt LEFT_SHIFT SPACE       &mt LEFT_SHIFT ENTER  &lt DIGITS BACKSPACE 
             >;
+
+            trackball-bindings = <&tmv>;
         };
 
         lower_layer {
@@ -177,8 +179,10 @@
             &kp RC(C)  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                               &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp SEMICOLON
             &kp RC(V)  &kp RC(LS(I))  &kp HOME  &kp END  &kp BACKSPACE  &kp LC(F12)         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS  &mt LEFT_CONTROL F12
             &kp RC(X)  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                               &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-                                &kp LC(F3)  &kp LALT  &mt LEFT_CONTROL TAB                  &trans  &trans  &kp SPACE
+                                &kp LC(F3)  &kp LALT  &mt LEFT_CONTROL TAB                  &trans  &trans 
             >;
+
+            trackball-bindings = <&tmv>;
         };
 
         raise_layer {
@@ -186,8 +190,10 @@
             &kp RS(INSERT)  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                      &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp BSPC
             &kp LCTRL &tog CALC  &none  &none  &kp BACKSPACE  &tog MOUSE                                &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
             &kp LALT  &tog GAME  &kp LC(X)  &none  &kp LC(LA(P))  &none                                 &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                                        &kp LGUI  &trans  &kp SPACE                                     &trans  &trans  &kp RALT
+                                        &kp LGUI  &trans  &kp SPACE                                     &trans  &trans
             >;
+
+            trackball-bindings = <&tmv>;
         };
 
         CALC_LAYER {
@@ -195,8 +201,10 @@
             &out OUT_USB  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0                &none  &none  &none  &none  &kp K_NEXT  &kp K_MUTE
             &out OUT_BLE  &kp LS(LG(Q))  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp BACKSPACE           &kp MINUS  &kp PLUS  &kp STAR  &kp SLASH  &kp K_PLAY_PAUSE  &kp K_STOP
             &none  &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp K_CALC                             &none  &kp DOT  &none  &none  &kp K_VOL_DN  &kp K_VOL_UP
-                                                                &kp LGUI  &to DEFAULT  &kp SPACE                    &kp ENTER  &to DEFAULT  &to 1
+                                                                &kp LGUI  &to DEFAULT  &kp SPACE                    &kp ENTER  &to DEFAULT
             >;
+
+            trackball-bindings = <&tmv>;
         };
 
         GAME_LAYER {
@@ -204,8 +212,10 @@
             &kp TAB  &kp ENTER  &none  &mo MOUSE_FAST  &mo MOUSE_SLOW  &kp HOME                             &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &none  &none
             &none  &none  &mwh SCROLL_HOR(-50)  &mwh SCROLL_HOR(50)  &mwh SCROLL_VERT(50)  &kp PAGE_UP      &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &kp LCTRL  &kp LSHFT
             &kp LALT  &none  &none  &none  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN                             &none  &none  &none  &none  &none  &kp ESC
-                                                        &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK                &mkp RCLK  &to DEFAULT  &mkp MCLK
+                                                        &mkp RCLK  &mkp MCLK   &mkp LCLK                    &mkp RCLK  &to DEFAULT
             >;
+
+            trackball-bindings = <&tmv>;
         };
 
         MOUSE_LAYER {
@@ -213,8 +223,10 @@
             &kp TAB  &kp ENTER  &none  &mo MOUSE_FAST  &mo MOUSE_SLOW  &kp HOME                             &kp END  &kp LS(LG(U))  &kp LS(LG(I))  &kp LS(LG(O))  &none  &none
             &none  &none  &mwh SCROLL_HOR(-50)  &mwh SCROLL_HOR(50)  &mwh SCROLL_VERT(50)  &kp PAGE_UP      &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &kp LCTRL  &kp LSHFT
             &kp LALT  &none  &none  &none  &mwh SCROLL_VERT(-50)  &kp PAGE_DOWN                             &none  &none  &none  &none  &none  &kp ESC
-                                                        &kp LCTRL  &kp LEFT_SHIFT  &mkp LCLK                &mkp RCLK  &to DEFAULT  &mkp MCLK
+                                                        &mkp RCLK  &mkp MCLK  &mkp LCLK                     &mkp RCLK  &to DEFAULT
             >;
+
+            trackball-bindings = <&tmv>;
         };
 
         MOUSE_LAYER2 {
@@ -222,8 +234,10 @@
             &trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans &trans &trans &trans &trans
             &trans  &trans  &trans  &trans  &trans  &trans                             &mmv MOVE_HOR(-1500)  &mmv MOVE_VERT(1500)  &mmv MOVE_VERT(-1500)  &mmv MOVE_HOR(1500)  &trans &trans
             &trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans &trans &trans &trans &trans
-                                    &trans  &trans  &trans                             &trans  &trans  &trans
+                                    &trans  &trans  &trans                             &trans  &trans
             >;
+
+            trackball-bindings = <&tmv_coarse>;
         };
 
         MOUSE_LAYER3 {
@@ -231,8 +245,10 @@
             &trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans &trans &trans &trans &trans
             &trans  &trans  &trans  &trans  &trans  &trans                             &mmv MOVE_HOR(-200)  &mmv MOVE_VERT(200)  &mmv MOVE_VERT(-200)  &mmv MOVE_HOR(200)  &trans &trans
             &trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans &trans &trans &trans &trans
-                                    &trans  &trans  &trans                             &trans  &trans  &trans
+                                    &trans  &trans  &trans                             &trans  &trans
             >;
+
+            trackball-bindings = <&tmv_fine>;
         };
     };
 };
